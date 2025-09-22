@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Git Project Test</h1>
+	<h1>Git Project Test2</h1>
 </body>
 </html>
