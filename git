@@ -66,3 +66,11 @@ git checkout -b 브랜치이름 : 브랜치를 생성한 후 이동
 git merag : 병합 -> 가져오려는 브랜치에서 해야함
 confilct(충돌) 발생 시 코드 수정 후 add & commit 처리 한다
 git branch -d 브랜치이름 : 브랜치 삭제 -> master에서 함
+
+<remote repository : GitHub 동기화>
+1. git remote add origin repository_url
+(생성된 Github repository url로 remote add)
+2. git push -u origin master
+(Local repository에 있는 것을 remote repository로 가져가기)
+3. git pull repository_url
+(local repository에 GitHub branch에서 가져오기)
