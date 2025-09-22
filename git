@@ -1,0 +1,68 @@
+<Git>
+(시스템 안에서 버전관리)
+1. 버전관리 시스템
+2. 코드 변경사항을 추적하는데 도움이 됨
+3. 코드 공동 작업에 사용됨
+
+
+<GitHub>
+github -> 온라인 사이트
+Git은 GitHub와 다름
+GitHub는 Git을 사용하는 도구
+GitHub는 Git의 원격 사이트 저장소
+
+<Git 주요 개념>
+Repository : Git이 프로젝트와 프로젝트 기록을 추적하는 폴더
+Stage : Git에 다음에 저장할 변경 사항을 알려줌
+Commit : 스테이징 된 변경 사항의 스냅샷을 Repository에 저장
+Branch : 동시에 여러 버전이나 기능을 작업
+Merge : 서로 다른 브랜치의 변경 사항을 결합
+Clone : 컴퓨터 원격 저장소(GitHub)의 사본을 만듦
+Pull : 원격 저장소(GitHub)에서 최신 변경 사항을 가져온다
+Push : 변경 사항을 원격 저장소(GitHub)로 보낸다
+
+<working directory>
+실제로 작업하는 공간 -> PC에서 프로젝트를 진행하는 폴더
+
+<staging area>
+Local Repository에 저장하기 전에 저장하는 공간
+이 공간에서 프로젝트의 버전을 만든다고 생각할 수 있다
+
+<local repository>
+변경 내역들과 함께 파일이 저장되는 공간
+프로젝트의 변경 사항들이 기록된다고 볼 수 있다
+
+<remote repository>
+깃허브가 해당하는 온라인 사이트 저장소이다.
+
+[git 생성 및 상태관리]
+1. 폴더 생성
+2. git init -> 깃을 초기화
+3. git status : 깃 상태를 확인
+4. git add index.html : staging area에 추가
+git add -A
+git add --all
+5. git commit -m "message"
+## 
+git status --short
+?? - untracked files
+A - files add to stage
+M - modified files
+D - delete files
+
+[되돌리기]
+git log --oneline -> 되돌리기 전에 로그 확인하여 해시코드 알아내기
+git reset --hard 해쉬값 -> 되돌아가고 싶은 곳으로 커밋
+git reset 3가지 옵션
+1) soft : 커밋만 취소
+2) mixed : 커밋 + git add(스테이징) 취소 (기본값)
+3) hard : 변경사항을 아예 없앰 : 완전 삭제 (하기전에 백업 해두기)
+
+<git branch 생성, 이동, 병합, 삭제>
+git branch : branch 확인
+git branch 브랜치이름 : branch 생성
+git checkout 브랜치이름 : branch 변경
+git checkout -b 브랜치이름 : 브랜치를 생성한 후 이동
+git merag : 병합 -> 가져오려는 브랜치에서 해야함
+confilct(충돌) 발생 시 코드 수정 후 add & commit 처리 한다
+git branch -d 브랜치이름 : 브랜치 삭제 -> master에서 함
